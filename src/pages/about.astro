@@ -21,7 +21,6 @@ const skills = [
 const happy = true;
 const finished = false;
 const goal = 3;
-
 ---
 
 <html lang="fr">
@@ -29,6 +28,18 @@ const goal = 3;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>{pageTitle}</title>
+
+		<style>
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
+
+			.skill {
+				color: rgb(248, 22, 206)8, 0, 105);
+				font-weight: bold;
+			}
+		</style>
 	</head>
 	<body>
 		<a href="/">Accueil</a>
@@ -40,9 +51,7 @@ const goal = 3;
 		<ul>
 			<li>Je m'appelle {identity.firstName}.</li>
 			<li>
-				Je vis en {identity.country} et je suis {
-					identity.occupation
-				}.
+				Je vis en {identity.country} et je suis {identity.occupation}.
 			</li>
 			{
 				identity.hobbies.length >= 2 && (
@@ -53,16 +62,21 @@ const goal = 3;
 				)
 			}
 		</ul>
-		<p>Voici mes compétences :</p>
+		<p>Mes compétences sont :</p>
 		<ul>
-			{skills.map((skill) => <li>{skill}</li>)}
+			{skills.map((skill) => <li class="skill">{skill}</li>)}
 		</ul>
 
-{happy && <p>Je suis heureuse d'apprendre Astro !</p>}
+		{happy && <p>Je suis heureuse d'apprendre Astro !</p>}
 
-{finished && <p>J'ai terminé ce tutoriel !</p>}
+		{finished && <p>J'ai terminé ce tutoriel !</p>}
 
-{goal === 3 ? <p>Mon objectif est de terminer en 3 jours.</p> : <p>Mon objectif n'est pas de 3 jours.</p>}
-
+		{
+			goal === 3 ? (
+				<p>Mon objectif est de terminer en 3 jours.</p>
+			) : (
+				<p>Mon objectif n'est pas de 3 jours.</p>
+			)
+		}
 	</body>
 </html>
