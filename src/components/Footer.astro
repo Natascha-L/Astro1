@@ -1,0 +1,13 @@
+---
+import Social from './Social.astro';
+
+const username = "Natascha-L";
+---
+
+<footer>
+  <p>Apprenez-en plus sur mes projets sur <a href={`https://www.${platform}.com/${username}`}>{platform}</a> !</p>
+  <Social platform="twitter" username="astrodotbuild" />
+  <Social platform="github" username="withastro" />
+  <Social platform="youtube" username="astrodotbuild" />
+
+</footer>
