@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Navigation.astro'
 import Footer from '../components/Footer.astro';
 
 
@@ -60,6 +60,9 @@ const textCase = "uppercase";
 
 	</head>
 	<body>
+
+		<Header />
+
 		<h1>{pageTitle}</h1>
 
 		<p>Voici quelques faits me concernant :</p>
@@ -93,7 +96,6 @@ const textCase = "uppercase";
 				<p>Mon objectif n'est pas de 3 jours.</p>
 			)
 		}
-				<Navigation />
 				<Footer/>
 
 	</body>
